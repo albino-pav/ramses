@@ -97,6 +97,12 @@ Para cargar los ficheros en su ordenador personal debe seguir los pasos siguient
 			-	La resolución de los posibles conflictos se realiza como se explica más arriba para
 				la subida del contenido local con el comando `git push`.
 
+caca
+====
+
+tonto
+-----
+
 *	Al final de la práctica, la rama **fulano-mengano** del repositorio GitHub servirá para remitir la
 	práctica para su evaluación utilizando el mecanismo *pull request*.
 	-	Vaya a la página principal de la copia del repositorio y asegúrese de estar en la rama
