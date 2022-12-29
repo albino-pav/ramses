@@ -1,17 +1,111 @@
-TecParla - Treball Final de Reconeixement
-=========================================
+RAMSES - Sistema Básico de Reconocimiento del Habla en Python
+=============================================================
 
-Esta tarea se distribuye a través del repositorio GitHub [Ramses](https://github.com/albino-pav/neuras),
-y la mayor parte de su gestión se realizará mediante esta web de trabajo colaborativo.  Al contrario que
-Git, GitHub se gestiona completamente desde un entorno gráfico bastante intuitivo. Además, está 
-razonablemente documentado, tanto internamente, mediante sus [Guías de GitHub](https://guides.github.com/),
-como externamente, mediante infinidad de tutoriales, guías y vídeos disponibles gratuitamente en internet.
+Esta práctica se distribuye a través del repositorio GitHub [Ramses](https://github.com/albino-pav/ramses),
+y una parte de su gestión se realizará mediante esta web de trabajo colaborativo.  Al contrario que Git,
+GitHub se gestiona completamente desde un entorno gráfico bastante intuitivo. Además, está razonablemente
+documentado, tanto internamente, mediante sus [Guías de GitHub](https://guides.github.com/), como
+externamente, mediante infinidad de tutoriales, guías y vídeos disponibles gratuitamente en internet.
 
-Para inicializar el repositorio de la tarea, siga las instrucciones del repositorio original de la
-asignatura, [Ramses](https://github.com/albino-pav/ramses).
 
-Entrega de la tarea.
---------------------
+Inicialización del repositorio de la práctica.
+----------------------------------------------
+
+Para cargar los ficheros en su ordenador personal debe seguir los pasos siguientes:
+
+*	Abra una cuenta GitHub para gestionar esta y el resto de prácticas del curso.
+*	Cree un repositorio GitHub con el contenido inicial de la práctica (sólo debe hacerlo uno de los
+	integrantes del grupo de laboratorio, cuya página GitHub actuará de repositorio central del grupo):
+	-	Acceda la página de la [Ramses](https://github.com/albino-pav/ramses).
+	-	En la parte superior derecha encontrará el botón **`Fork`**. Apriételo y, después de unos segundos,
+		se creará en su cuenta GitHub un proyecto con el mismo nombre (**ramses**). Si ya tuviera uno con ese 
+		nombre, se utilizará el nombre **ramses-1**, y así sucesivamente.
+*	Habilite al resto de miembros del grupo como *colaboradores* del proyecto; de este modo, podrán
+	subir sus modificaciones al repositorio central:
+	-	En la página principal del repositorio, en la pestaña **:gear:`Settings`**, escoja la opción 
+		**Collaborators** y añada a su compañero de prácticas.
+	-	Éste recibirá un email solicitándole confirmación. Una vez confirmado, tanto él como el
+		propietario podrán gestionar el repositorio, por ejemplo: crear ramas en él o subir las
+		modificaciones de su directorio local de trabajo al repositorio GitHub.
+*	En la página principal del repositorio, localice el botón **Branch: master** y úselo para crear
+	una rama nueva con los primeros apellidos de los integrantes del equipo de prácticas separados por
+	guion (**fulano-mengano**).
+*	Todos los miembros del grupo deben realizar su copia local en su ordenador personal.
+	-	Copie la dirección de su copia del repositorio apretando en el botón **Clone or download**.
+		Asegúrese de usar *Clone with HTTPS*.
+	-	Abra una sesión de Bash en su ordenador personal y vaya al directorio **PAV**. Desde ahí, ejecute:
+
+		```.sh
+		git clone dirección-del-fork-de-la-práctica .
+		```
+
+	-	Cambie a la rama **fulano-mengano** con la orden:
+
+		```.sh
+		git checkout fulano-mengano
+		```
+
+*	A partir de este momento, todos los miembros del grupo de prácticas pueden trabajar en su directorio
+	local del modo habitual, usando el repositorio remoto en GitHub como repositorio central para el trabajo colaborativo
+	de los distintos miembros del grupo de prácticas o como copia de seguridad.
+	-	Puede *confirmar* versiones del proyecto en su directorio local con las órdenes siguientes:
+
+		```.sh
+		git add .
+		git commit -m "Mensaje del commit"
+		```
+
+	-	Las versiones confirmadas, y sólo ellas, se almacenan en el repositorio y pueden ser accedidas en cualquier momento.
+
+*	Para interactuar con el contenido remoto en GitHub es necesario que los cambios en el directorio local estén confirmados.
+
+	-	Puede comprobar si el directorio está *limpio* (es decir, si la versión actual está confirmada) usando el comando
+		`git status`.
+
+	-	La versión actual del directorio local se sube al repositorio remoto con la orden:
+
+		```.sh
+		git push
+		```
+
+		*	Si el repositorio remoto contiene cambios no presentes en el directorio local, `git` puede negarse
+			a subir el nuevo contenido.
+
+			-	En ese caso, lo primero que deberemos hacer es incorporar los cambios presentes en el repositorio
+				GitHub con la orden `git pull`.
+
+			-	Es posible que, al hacer el `git pull` aparezcan *conflictos*; es decir, ficheros que se han modificado
+				tanto en el directorio local como en el repositorio GitHub y que `git` no sabe cómo combinar.
+
+			-	Los conflictos aparecen marcados con cadenas del estilo `>>>>`, `<<<<` y `====`. Los ficheros correspondientes
+				deben ser editados para decidir qué versión preferimos conservar. Un editor avanzado, del estilo de Microsoft
+				Visual Studio Code, puede resultar muy útil para localizar los conflictos y resolverlos.
+
+			-	Tras resolver los conflictos, se ha de confirmar los cambios con `git commit` y ya estaremos en condiciones
+				de subir la nueva versión a GitHub con el comando `git push`.
+
+
+	-	Para bajar al directorio local el contenido del repositorio GitHub hay que ejecutar la orden:
+
+		```.sh
+		git pull
+		```
+	
+		*	Si el repositorio local contiene cambios no presentes en el directorio remoto, `git` puede negarse a bajar
+			el contenido de este último.
+
+			-	La resolución de los posibles conflictos se realiza como se explica más arriba para
+				la subida del contenido local con el comando `git push`.
+
+*	Al final de la práctica, la rama **fulano-mengano** del repositorio GitHub servirá para remitir la
+	práctica para su evaluación utilizando el mecanismo *pull request*.
+	-	Vaya a la página principal de la copia del repositorio y asegúrese de estar en la rama
+		**fulano-mengano**.
+	-	Pulse en el botón **New pull request**, y siga las instrucciones de GitHub.
+
+
+Entrega de la práctica.
+-----------------------
 
 Responda, en este mismo documento (README.md), los ejercicios indicados a continuación. Este documento es
 un fichero de texto escrito con un formato denominado _**markdown**_. La principal característica de este
@@ -27,145 +121,5 @@ sintáxis en la página web [Sintaxis de Markdown](https://daringfireball.net/pr
 También puede consultar el documento adjunto [MARKDOWN.md](MARKDOWN.md), en el que se enumeran los
 elementos más relevantes para completar la redacción de esta práctica.
 
-Recuerde realizar un *pull request* una vez completada la práctica.
+Recuerde realizar el *pull request* una vez completada la práctica.
 
-Ejercicios.
------------
-
-### Reparación de DeepSpeech -> DeepSpeechOK
-
-El formato empleado por `entorch.py` y `recorch.py` para la escritura y lectura las redes neuronales de 
-PyTorch es TorchScript. Este formato tiene la ventaja de que almacena la estructura junto con sus parámetros,
-lo cual simplifica mucho la tarea. Un problema que aparece es que la conversión a formato TorchScript exige
-coherencia absoluta en los tipos de datos empleados. Algo que, justamente, no es habitual en Python.
-
-Hay un punto en la definición empleada por PyTorch de la red neuronal
-[DeepSpeech](https://pytorch.org/audio/stable/generated/torchaudio.models.DeepSpeech.html) en la que esta
-coherencia no existe: la invocación a la función `torch.nn.functional.hardtanh()` usa enteros como valores
-límite, cuando su definición exige reales.
-
-En este ejercicio deberá escribir una versión *reparada* de DeepSpeech, que llamará DeepSpeechOK y almacenará
-en el fichero `neuras/deepspeechok.py`. Para ello, se recomienda seguir los pasos siguientes:
-
-1. Acceda a la página de DeepSpeech en PyTorch y localice el enlace al código fuente (indicado por el enlace
-`[SOURCE]`).
-2. Copie el código fuente al fichero `neuras/deepspeechok.py` y cambie el nombre de la red a `DeepSpeechOK`.
-	- Deberá eliminar las etiquetas `[docs]` que aparecen en el código y que no son expresiones Python
-	  válidas.
-3. Corrija el código fuente para que no se produzca el error al intentar guardar el modelo ejecutando
-  `entorch.py`
-
-#### A entregar
-
-- Adjunte a continuación la parte o partes del código fuente que ha tenido que modificar para corregir el error.
-
-
-- Inserte una captura que muestre un par de iteraciones de entrenamiento de una red `DeepSpeechOK` usando
-  `entorch.py` y sin que se produzca error al escribir el modelo.
-
-
-### Optimización de la topología del perceptrón multicapa
-
-Determine los hiperparámetros óptimos del perceptrón multicapa en la tarea de reconocimiento de las vocales del
-castellano. Los hiperparámetros susceptibles de optimización son:
-
-1. Número de capas.
-2. Número de neuronas en las capas ocultas o internas.
-3. Función de activación de las neuronas (por defecto, se usa ReLU; como mínimo, se ha de probar también la
-   sigmoide y la hardtanh).
-
-Se recomienda usar, en todos los casos, el optimizador Adam con un paso de aprendizaje adecuado.
-
-Hay que tener en cuenta que unos hiperparámetros pueden depender de los otros. Es decir, tal vez el número de
-capas óptimo sea distinto en función del número de neuronas por capa, y viceversa. Este problema se puede
-resolver de varias maneras: por ejemplo, en lugar de optimizar cada hiperparámetro por separado, pueden
-optimizarse todos de manera conjunta. Esta estrategia puede ser muy cara en términos de computación (si se
-quieren probar cinco valores de cada hiperparámetro, el número total de pruebas sería $5\times 5\times 5=125$).
-
-Se recomienda optimizar primero el número de capas y de neuronas por capa y, usando los valores óptimos, obtener
-el resultado con las funciones de activación probadas. Por otro lado, para optimizar el número de capas y neuronas,
-se recomienda empezar por dos valores extremos para cada uno ( $2\times 2=4$ experimentos); a la vista de los
-resultados, seleccionar otros dos valores para cada uno (otros 4 experimentos), y así sucesivamente hasta obtener
-el resultado óptimo.
-
-#### A entregar
-
-- Inserte a continuación una tabla (de markdown) con los mejores resultados obtenidos para cada función de
-  activación. La tabla deberá tener un formato semejante al siguiente:
-
-Activación|  ReLU    |    sigmoide   |   hardtanh  
-----------|----------|---------------|----------- 
-Capas     |          |               |             
-Nodos     |          |               |             
-Exactitud |          |               |             
-
-
-modo texto               |modo gráfico           |modo texto                |modo gráfico
--------------------------| :-------------------: |--------------------------| :--------------------:
-`*cursiva*`              |*cursiva*              |`_cursiva_`               |_cursiva_              
-`**negrita**`            |**negrita**            |`__negrita__`             |__negrita__            
-`***cursiva y negrita***`|***cursiva y negrita***|`___negrita y cursiva___` |___negrita y cursiva___
-`_**negrita y cursiva**_`|__*negrita y cursiva*__|`__*cursiva y negrita*__ `|_**cursiva y negrita**_
-
-### Optimización del paso de aprendizaje de Adam para el entrenamiento de DeepSpeechOK
-
-Pruebe distintos valores del paso de aprendizaje usado por Adam en el entrenamiento de la red DeepSpeechOK.
-
-#### A entregar
-
-- Inserte una gráfica con la evolución durante 100 épocas de entrenamiento para cada uno de los valores probados.
-  El resultado debería ser semejante al publicado en la página 38 del fichero `neuras.pdf`.
-
-### Evaluación ciega del sistema de reconocimiento
-
-Cada pareja debe realizar el reconocimiento de la parte *oculta* de la base de datos de vocales con el mejor sistema
-que sean capaces de diseñar. Las parejas participantes entrarán en una competición, y una parte de la nota final
-dependerá de su clasificación en la misma.
-
-La parte oculta de la base de datos corresponde al fichero guía `Gui/eval.gui` y no contiene la transcripción
-de las señales (al generar los lotes de señales deberá fijar `dirMar=None`).
-
-#### A entregar
-
-- El repositorio deberá contener el fichero `final.tgz` con el directorio de los ficheros de reconocimiento de la
-  parte oculta de la base de datos.
-
-  + El formato `tgz` es muy común en entornos Unix y consiste en un fichero `tar` comprimido con `gzip`. Si los
-	ficheros del reconocimiento están en el directorio `Rec/final`, puede generar el fichero demandado ejecutando
-	la orden `tar cvzf final.tgz Rec/final`.
-
-### Trabajo suplementario opcional (uso del error cuadrático medio como función de coste)
-
-Si le han quedado ganas de más, puede probar otras funciones de coste. Por defecto, el sistema usa como capa de
-salida la clase `LogSoftMax` y como función de coste el logaritmo de la verosimilitud cambiada de signo,
-`nll_loss()`. Esta es, seguramente, la mejor elección posible en tareas de reconocimiento como la que se está
-usando en este curso.
-
-Sin embargo, en otras tareas, como puedan ser el modelado de sistemas, la reconstrucción de señales, etc., es
-más conveniente el uso del error cuadrático medio como función de coste 
-([mse_loss()](https://pytorch.org/docs/stable/generated/torch.nn.functional.mse_loss.html)). El uso de esta función
-de coste implica:
-
-1. Evidentemente, hay que sustituir `nll_loss()` por `mse_loss()` en la invocación al constructor del modelo.
-2. En lugar de usar como capa de salida el logaritmo del softmax, `LogSoftMax`, hay que usar el propio softmax,
-   `SoftMax`. Esto también se reduce a cambiar la invocación del constructor del perceptrón.
-3. `mse_loss()` exige que el objetivo de la salida de la red sea del tipo *one-shot vector*. Actualmente, el
-   objetivo que usa `ModPT` es el índice de la unidad. Esta diferencia resulta en cambios más importantes que
-   las otras dos:
-   - Un one-shot vector es un vector de tamaño igual al del vocabulario en el que todos los elementos son cero
-     salvo el correspodiente al índice de la unidad, que vale uno.
-   - Para obtener el objetivo de este tipo hay que usar una función generadora de lotes diferente a la usada hasta
-     ahora, `lotesPT()`. Puede, por ejemplo, crear una nueva función de nombre `lotesMSE()`, o semejante.
-   - Modificar la transcripción que aparece en los lotes de señales afecta a alguno de los métodos de `ModPT`. Será
-     conveniente construir una nueva clase, por ejemplo: `ModMSE`, en la que casi todo es lo mismo a `ModPT`, pero
-	 con esos métodos diferentes. Puede ser buena idea que `ModMSE` sea heredera de `ModPT`...
-4. Es muy probable que los parámetros de la red y/o del optimizador deban ser modificados. En especial, es muy
-   probable que el paso de aprendizaje, `lr`, deba ser adaptado a la nueva función de coste.
-
-#### A entregar
-
-- Inserte el código de la función `lotesMSE()` que proporciona transcripciones en la forma de vector one-shot.
-
-- Inserte el código de la clase `ModMSE` compatible con la función de coste `mse_loss()`.
-
-- Inserte una tabla con el resultado obtenido con `nll_loss()` y `mse_loss()`
