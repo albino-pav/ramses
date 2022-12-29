@@ -93,11 +93,11 @@ el resultado óptimo.
 - Inserte a continuación una tabla (de markdown) con los mejores resultados obtenidos para cada función de
   activación. La tabla deberá tener un formato semejante al siguiente:
 
-          |ReLU    |sigmoide   |hardtanh  
-----------| :----: |-----------| :-----: 
-Capas     |        |           |             
-Nodos     |        |           |             
-Exactitud |        |           |             
+Activación|  ReLU    |    sigmoide   |   hardtanh  
+----------| :------: |---------------| :---------: 
+Capas     |          |               |             
+Nodos     |          |               |             
+Exactitud |          |               |             
 
 
 modo texto               |modo gráfico           |modo texto                |modo gráfico
