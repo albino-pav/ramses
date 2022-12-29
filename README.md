@@ -98,7 +98,6 @@ el resultado óptimo.
 Capas     |          |               |             
 Nodos     |          |               |             
 Exactitud |          |               |             
-----------|----------|---------------|-------------
 
 ### Optimización del paso de aprendizaje de Adam para el entrenamiento de DeepSpeechOK
 
