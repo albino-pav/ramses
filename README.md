@@ -93,12 +93,12 @@ el resultado óptimo.
 - Inserte a continuación una tabla (de markdown) con los mejores resultados obtenidos para cada función de
   activación. La tabla deberá tener un formato semejante al siguiente:
 
-           |  ReLU    |    sigmoide   |   hardtanh  |
-|----------|----------|---------------|-------------|
-|Capas     |          |               |             |
-|Nodos     |          |               |             |
-|Exactitud |          |               |             |
-|----------|----------|---------------|-------------|
+          |  ReLU    |    sigmoide   |   hardtanh  
+----------|----------|---------------|-------------
+Capas     |          |               |             
+Nodos     |          |               |             
+Exactitud |          |               |             
+----------|----------|---------------|-------------
 
 ### Optimización del paso de aprendizaje de Adam para el entrenamiento de DeepSpeechOK
 
