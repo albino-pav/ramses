@@ -99,6 +99,14 @@ Capas     |          |               |
 Nodos     |          |               |             
 Exactitud |          |               |             
 
+
+modo texto               |modo gráfico           |modo texto                |modo gráfico
+-------------------------| :-------------------: |--------------------------| :--------------------:
+`*cursiva*`              |*cursiva*              |`_cursiva_`               |_cursiva_              
+`**negrita**`            |**negrita**            |`__negrita__`             |__negrita__            
+`***cursiva y negrita***`|***cursiva y negrita***|`___negrita y cursiva___` |___negrita y cursiva___
+`_**negrita y cursiva**_`|__*negrita y cursiva*__|`__*cursiva y negrita*__ `|_**cursiva y negrita**_
+
 ### Optimización del paso de aprendizaje de Adam para el entrenamiento de DeepSpeechOK
 
 Pruebe distintos valores del paso de aprendizaje usado por Adam en el entrenamiento de la red DeepSpeechOK.
