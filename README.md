@@ -94,7 +94,7 @@ el resultado óptimo.
   activación. La tabla deberá tener un formato semejante al siguiente:
 
           |  ReLU    |    sigmoide   |   hardtanh  
-----------|----------|---------------|-------------
+----------|:--------:|---------------|:-----------:
 Capas     |          |               |             
 Nodos     |          |               |             
 Exactitud |          |               |             
