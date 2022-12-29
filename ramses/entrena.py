@@ -6,7 +6,7 @@ from util import *
 from prm import *
 from mar import *
 
-def entrena(dirMod, dirMar, dirPrm, *guiSen):
+def entrena(dirMod, dirMar, dirPrm, ficLisUni, *guiSen):
     """
     Entrena los modelos acústicos de las unidades encontradas en los ficheros de
     entrenamiento, indicados en el fichero guía 'guiSen' escribiendo el resultado en
@@ -17,8 +17,10 @@ def entrena(dirMod, dirMar, dirPrm, *guiSen):
     ubicados en 'dirMar'.
     """
 
-    modelos = {}
-    numSen = {}
+    unidades = leeLis(ficLisUni)
+    modelos = {unidad: 0 for unidad in unidades}
+    numSen = {unidad: 0 for unidad in unidades}
+
     for sen in tqdm.tqdm(leeLis(*guiSen)):
         pathMar = pathName(dirMar, sen, '.mar')
         mod = cogeTrn(pathMar)
@@ -26,15 +28,13 @@ def entrena(dirMod, dirMar, dirPrm, *guiSen):
         pathPrm = pathName(dirPrm, sen, '.prm')
         prm = leePrm(pathPrm)
 
-        if mod not in modelos:
-            modelos[mod] = prm
-            numSen[mod] = 1
-        else:
-            modelos[mod] += prm
-            numSen[mod] += 1
+        modelos[mod] += prm
+        numSen[mod] += 1
 
     for mod in modelos:
         modelos[mod] /= numSen[mod]
+
+    for mod in modelos:
         pathMod = pathName(dirMod, mod, '.mod')
         chkPathName(pathMod)
         with open(pathMod, 'wb') as fpMod:
