@@ -84,7 +84,7 @@ quieren probar cinco valores de cada hiperparámetro, el número total de prueba
 
 Se recomienda optimizar primero el número de capas y de neuronas por capa y, usando los valores óptimos, obtener
 el resultado con las funciones de activación probadas. Por otro lado, para optimizar el número de capas y neuronas,
-se recomienda empezar por dos valores extremos para cada uno ($2\times 2=4$ experimentos); a la vista de los
+se recomienda empezar por dos valores extremos para cada uno ( $2\times 2=4$ experimentos); a la vista de los
 resultados, seleccionar otros dos valores para cada uno (otros 4 experimentos), y así sucesivamente hasta obtener
 el resultado óptimo.
 
